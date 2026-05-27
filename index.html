@@ -23,9 +23,16 @@
             background-size: cover;
             background-position: center top;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: scroll;
             min-height: 100vh;
             width: 100%;
+        }
+
+        /* Desktop: fixed background for parallax effect */
+        @media (min-width: 1025px) {
+            body {
+                background-attachment: fixed;
+            }
         }
         
         .text-shadow {
