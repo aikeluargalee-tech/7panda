@@ -120,6 +120,338 @@
                 rgba(255, 240, 245, 0.6) 70%,
                 rgba(255, 245, 250, 0.9) 100%);
         }
+
+        /* Background Elements */
+        .bg-scene {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-element {
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+
+        /* Rainbow */
+        .rainbow {
+            width: 200px;
+            height: 100px;
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .rainbow-arc {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px 100px 0 0;
+            background: linear-gradient(to bottom, 
+                #ff6b6b 0%, #ff6b6b 16%,
+                #ffd93d 16%, #ffd93d 32%,
+                #6bcf7f 32%, #6bcf7f 48%,
+                #4d96ff 48%, #4d96ff 64%,
+                #9b59b6 64%, #9b59b6 80%,
+                #ff69b4 80%, #ff69b4 100%);
+            opacity: 0.6;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Clouds */
+        .cloud {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            position: relative;
+            opacity: 0.9;
+        }
+
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+        }
+
+        .cloud1 {
+            width: 80px;
+            height: 40px;
+            left: 20%;
+            top: 35%;
+            transform: scale(0.9);
+        }
+
+        .cloud1::before {
+            width: 50px;
+            height: 50px;
+            top: -25px;
+            left: 10px;
+        }
+
+        .cloud1::after {
+            width: 40px;
+            height: 40px;
+            top: -15px;
+            right: 10px;
+        }
+
+        .cloud2 {
+            width: 80px;
+            height: 40px;
+            left: 80%;
+            top: 40%;
+            transform: scale(0.9);
+        }
+
+        .cloud2::before {
+            width: 50px;
+            height: 50px;
+            top: -25px;
+            left: 10px;
+        }
+
+        .cloud2::after {
+            width: 40px;
+            height: 40px;
+            top: -15px;
+            right: 10px;
+        }
+
+        /* House */
+        .house {
+            left: 15%;
+            top: 65%;
+            transform: scale(0.8);
+        }
+
+        .house-body {
+            width: 80px;
+            height: 60px;
+            background: linear-gradient(to bottom, #ffe4e1, #ffc0cb);
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .house-roof {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 40px solid #ff69b4;
+            position: absolute;
+            top: -35px;
+            left: -10px;
+        }
+
+        .house-window {
+            width: 20px;
+            height: 20px;
+            background: #87ceeb;
+            border-radius: 3px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            border: 3px solid #fff;
+        }
+
+        .house-door {
+            width: 20px;
+            height: 30px;
+            background: #ff1493;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            bottom: 0;
+            right: 15px;
+        }
+
+        /* Cupcake Shop */
+        .cupcake-shop {
+            left: 85%;
+            top: 65%;
+            transform: scale(0.8);
+        }
+
+        .shop-body {
+            width: 80px;
+            height: 60px;
+            background: linear-gradient(to bottom, #fff5ee, #ffe4e1);
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .shop-roof {
+            width: 100px;
+            height: 30px;
+            background: linear-gradient(to right, #ff69b4, #ff1493);
+            border-radius: 50px 50px 0 0;
+            position: absolute;
+            top: -25px;
+            left: -10px;
+        }
+
+        .shop-sign {
+            width: 60px;
+            height: 20px;
+            background: #fff;
+            border-radius: 10px;
+            position: absolute;
+            top: -35px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .shop-window {
+            width: 50px;
+            height: 30px;
+            background: linear-gradient(to bottom, #87ceeb, #b0e0e6);
+            border-radius: 3px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            border: 3px solid #fff;
+        }
+
+        /* Balloons */
+        .balloon {
+            width: 30px;
+            height: 40px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+            animation: float-balloon 3s ease-in-out infinite;
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 30px;
+            background: rgba(255,255,255,0.5);
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .balloon1 {
+            background: linear-gradient(to bottom, #ff6b6b, #ff4757);
+            left: 90%;
+            top: 75%;
+            transform: scale(0.7);
+            animation-delay: 0s;
+        }
+
+        .balloon2 {
+            background: linear-gradient(to bottom, #ffd93d, #ffb347);
+            left: 95%;
+            top: 80%;
+            transform: scale(0.7);
+            animation-delay: 0.5s;
+        }
+
+        @keyframes float-balloon {
+            0%, 100% { transform: translateY(0) scale(0.7); }
+            50% { transform: translateY(-10px) scale(0.7); }
+        }
+
+        /* Desktop Layout (min-width: 1025px) */
+        @media (min-width: 1025px) {
+            .rainbow {
+                top: 15%;
+                transform: translateX(-50%) scale(1.3);
+            }
+
+            .cloud1 {
+                left: 25%;
+                top: 30%;
+                transform: scale(1.2);
+            }
+
+            .cloud2 {
+                left: 75%;
+                top: 30%;
+                transform: scale(1.2);
+            }
+
+            .house {
+                left: 20%;
+                top: 55%;
+                transform: scale(1.0);
+            }
+
+            .cupcake-shop {
+                left: 80%;
+                top: 55%;
+                transform: scale(1.0);
+            }
+
+            .balloon1 {
+                left: 92%;
+                top: 65%;
+                transform: scale(0.9);
+            }
+
+            .balloon2 {
+                left: 96%;
+                top: 70%;
+                transform: scale(0.9);
+            }
+
+            @keyframes float-balloon {
+                0%, 100% { transform: translateY(0) scale(0.9); }
+                50% { transform: translateY(-15px) scale(0.9); }
+            }
+        }
+
+        /* Medium screens (481px - 1024px) */
+        @media (min-width: 481px) and (max-width: 1024px) {
+            .rainbow {
+                transform: translateX(-50%) scale(1.2);
+            }
+
+            .cloud1 {
+                left: 22%;
+                top: 32%;
+                transform: scale(1.0);
+            }
+
+            .cloud2 {
+                left: 78%;
+                top: 35%;
+                transform: scale(1.0);
+            }
+
+            .house {
+                left: 18%;
+                top: 60%;
+                transform: scale(0.9);
+            }
+
+            .cupcake-shop {
+                left: 82%;
+                top: 60%;
+                transform: scale(0.9);
+            }
+
+            .balloon1 {
+                left: 91%;
+                top: 70%;
+                transform: scale(0.8);
+            }
+
+            .balloon2 {
+                left: 95%;
+                top: 75%;
+                transform: scale(0.8);
+            }
+        }
     </style>
 </head>
 <body>
@@ -129,6 +461,40 @@
     <div class="sparkle" style="top: 20%; left: 20%; animation-delay: 1s;"></div>
     <div class="sparkle" style="top: 30%; left: 75%; animation-delay: 1.5s;"></div>
     <div class="sparkle" style="top: 8%; left: 50%; animation-delay: 0.8s;"></div>
+
+    <!-- Background Scene -->
+    <div class="bg-scene">
+        <!-- Rainbow -->
+        <div class="bg-element rainbow">
+            <div class="rainbow-arc"></div>
+        </div>
+
+        <!-- Clouds -->
+        <div class="bg-element cloud cloud1"></div>
+        <div class="bg-element cloud cloud2"></div>
+
+        <!-- House -->
+        <div class="bg-element house">
+            <div class="house-roof"></div>
+            <div class="house-body">
+                <div class="house-window"></div>
+                <div class="house-door"></div>
+            </div>
+        </div>
+
+        <!-- Cupcake Shop -->
+        <div class="bg-element cupcake-shop">
+            <div class="shop-roof"></div>
+            <div class="shop-sign">🧁</div>
+            <div class="shop-body">
+                <div class="shop-window"></div>
+            </div>
+        </div>
+
+        <!-- Balloons -->
+        <div class="bg-element balloon balloon1"></div>
+        <div class="bg-element balloon balloon2"></div>
+    </div>
 
     <!-- Header -->
     <header class="w-full px-6 py-4">
