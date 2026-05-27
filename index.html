@@ -26,11 +26,31 @@
             background-attachment: scroll;
             min-height: 100vh;
             width: 100%;
+            position: relative;
+        }
+
+        /* Fresh vibrant overlay for background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background_upscaled.jpeg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            filter: brightness(1.15) contrast(1.2) saturate(1.3);
+            z-index: -2;
         }
 
         /* Desktop: fixed background for parallax effect */
         @media (min-width: 1025px) {
             body {
+                background-attachment: fixed;
+            }
+            body::before {
                 background-attachment: fixed;
             }
         }
