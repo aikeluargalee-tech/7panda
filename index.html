@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7Panda - Cute Squishy Toys</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -22,37 +22,6 @@
             background: linear-gradient(135deg, #0d0221 0%, #1a0a2e 20%, #2d1b4e 40%, #4a148c 60%, #2d1b4e 80%, #1a0a2e 100%);
             min-height: 100vh;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 20px 10px;
-        }
-        
-        .mobile-container {
-            width: 100%;
-            max-width: 400px;
-            min-height: calc(100vh - 40px);
-            background-image: url('WhatsApp Image 2026-05-27 at 16.50.36.jpeg');
-            background-size: cover;
-            background-position: center top;
-            background-repeat: no-repeat;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .content-overlay {
-            background: linear-gradient(to bottom, 
-                transparent 0%,
-                transparent 25%,
-                rgba(255, 230, 240, 0.3) 35%,
-                rgba(255, 230, 240, 0.6) 45%,
-                rgba(255, 240, 245, 0.85) 55%,
-                rgba(255, 245, 250, 0.95) 70%,
-                rgba(255, 250, 255, 1) 100%);
-            min-height: 100%;
-            padding: 16px;
         }
         
         .text-shadow {
@@ -142,194 +111,260 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        .hero-section {
+            background: linear-gradient(to bottom, 
+                transparent 0%,
+                rgba(255, 230, 240, 0.1) 30%,
+                rgba(255, 230, 240, 0.3) 50%,
+                rgba(255, 240, 245, 0.6) 70%,
+                rgba(255, 245, 250, 0.9) 100%);
+        }
     </style>
 </head>
 <body>
-    <div class="mobile-container">
-        <!-- Sparkles -->
-        <div class="sparkle" style="top: 8%; left: 15%; animation-delay: 0s;"></div>
-        <div class="sparkle" style="top: 15%; left: 80%; animation-delay: 0.5s;"></div>
-        <div class="sparkle" style="top: 25%; left: 25%; animation-delay: 1s;"></div>
-        <div class="sparkle" style="top: 35%; left: 70%; animation-delay: 1.5s;"></div>
+    <!-- Sparkles -->
+    <div class="sparkle" style="top: 5%; left: 10%; animation-delay: 0s;"></div>
+    <div class="sparkle" style="top: 12%; left: 85%; animation-delay: 0.5s;"></div>
+    <div class="sparkle" style="top: 20%; left: 20%; animation-delay: 1s;"></div>
+    <div class="sparkle" style="top: 30%; left: 75%; animation-delay: 1.5s;"></div>
+    <div class="sparkle" style="top: 8%; left: 50%; animation-delay: 0.8s;"></div>
 
-        <div class="content-overlay">
-            <!-- Header -->
-            <header class="pt-2 pb-4">
-                <div class="flex items-center justify-between">
-                    <!-- Logo -->
-                    <div class="flex items-center gap-2">
-                        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-pink-300 via-rose-300 to-orange-200 flex items-center justify-center shadow-lg">
-                            <span class="text-lg">🧸</span>
-                        </div>
-                        <h1 class="text-lg font-bold gradient-text font-['Fredoka']">7Panda</h1>
-                    </div>
-                    
-                    <!-- Cart Button -->
-                    <button class="cart-btn rounded-full p-2 text-white relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                        </svg>
-                        <span class="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-yellow-400 text-pink-600 text-[10px] flex items-center justify-center font-bold shadow-lg">3</span>
-                    </button>
+    <!-- Header -->
+    <header class="w-full px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-300 via-rose-300 to-orange-200 flex items-center justify-center shadow-lg">
+                    <span class="text-2xl">🧸</span>
                 </div>
-            </header>
-
-            <!-- Hero Section -->
-            <section class="py-4 text-center">
-                <div class="floating">
-                    <span class="inline-block px-3 py-1.5 rounded-full glass-btn text-pink-500 text-[10px] font-bold tracking-wide">
-                        ✨ New Collection Available
-                    </span>
-                </div>
-                <h2 class="text-xl font-bold text-pink-500 mt-3 mb-1 text-shadow font-['Fredoka']">
-                    Squish Your Stress Away
-                </h2>
-                <p class="text-xs text-pink-400/90 max-w-[260px] mx-auto text-shadow-soft leading-relaxed">
-                    Ultra-soft, kawaii squishies for stress relief & collecting!
-                </p>
-            </section>
-
-            <!-- Categories - Horizontal Scroll -->
-            <section class="py-2">
-                <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-                    <button class="glass-btn active px-3 py-1.5 rounded-full text-[10px] font-bold shadow-lg flex-shrink-0">
-                        All 🌈
-                    </button>
-                    <button class="glass-btn px-3 py-1.5 rounded-full text-[10px] font-bold text-gray-600 shadow-lg flex-shrink-0">
-                        Bears 🐻
-                    </button>
-                    <button class="glass-btn px-3 py-1.5 rounded-full text-[10px] font-bold text-gray-600 shadow-lg flex-shrink-0">
-                        Food 🍰
-                    </button>
-                    <button class="glass-btn px-3 py-1.5 rounded-full text-[10px] font-bold text-gray-600 shadow-lg flex-shrink-0">
-                        Panda 🐼
-                    </button>
-                    <button class="glass-btn px-3 py-1.5 rounded-full text-[10px] font-bold text-gray-600 shadow-lg flex-shrink-0">
-                        Jumbo 🎈
-                    </button>
-                </div>
-            </section>
-
-            <!-- Products Grid -->
-            <section class="py-3">
-                <h3 class="text-base font-bold text-pink-500 text-center mb-3 text-shadow font-['Fredoka']">
-                    ✨ Trending Squishies
-                </h3>
-                
-                <div class="grid grid-cols-2 gap-3">
-                    <!-- Product 1 -->
-                    <div class="product-item text-center">
-                        <div class="product-bg mb-2 flex items-center justify-center">
-                            <span class="text-3xl">🐻</span>
-                        </div>
-                        <h4 class="font-bold text-pink-500 text-xs text-shadow-soft">Berry Bear</h4>
-                        <p class="text-[10px] text-pink-400 font-semibold">$12.99</p>
-                    </div>
-
-                    <!-- Product 2 -->
-                    <div class="product-item text-center">
-                        <div class="product-bg mb-2 flex items-center justify-center">
-                            <span class="text-3xl">🍓</span>
-                        </div>
-                        <h4 class="font-bold text-pink-500 text-xs text-shadow-soft">Strawberry Cake</h4>
-                        <p class="text-[10px] text-pink-400 font-semibold">$18.99</p>
-                    </div>
-
-                    <!-- Product 3 -->
-                    <div class="product-item text-center">
-                        <div class="product-bg mb-2 flex items-center justify-center">
-                            <span class="text-3xl">🐱</span>
-                        </div>
-                        <h4 class="font-bold text-pink-500 text-xs text-shadow-soft">Cloud Kitty</h4>
-                        <p class="text-[10px] text-pink-400 font-semibold">$8.99</p>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="product-item text-center">
-                        <div class="product-bg mb-2 flex items-center justify-center">
-                            <span class="text-3xl">🦄</span>
-                        </div>
-                        <h4 class="font-bold text-pink-500 text-xs text-shadow-soft">Dream Unicorn</h4>
-                        <p class="text-[10px] text-pink-400 font-semibold">$15.99</p>
-                    </div>
-
-                    <!-- Product 5 -->
-                    <div class="product-item text-center">
-                        <div class="product-bg mb-2 flex items-center justify-center">
-                            <span class="text-3xl">🍑</span>
-                        </div>
-                        <h4 class="font-bold text-pink-500 text-xs text-shadow-soft">Peachy Bun</h4>
-                        <p class="text-[10px] text-pink-400 font-semibold">$10.99</p>
-                    </div>
-
-                    <!-- Product 6 -->
-                    <div class="product-item text-center">
-                        <div class="product-bg mb-2 flex items-center justify-center">
-                            <span class="text-3xl">🐰</span>
-                        </div>
-                        <h4 class="font-bold text-pink-500 text-xs text-shadow-soft">Bunny Mochi</h4>
-                        <p class="text-[10px] text-pink-400 font-semibold">$7.99</p>
-                    </div>
-
-                    <!-- Product 7 -->
-                    <div class="product-item text-center">
-                        <div class="product-bg mb-2 flex items-center justify-center">
-                            <span class="text-3xl">🐥</span>
-                        </div>
-                        <h4 class="font-bold text-pink-500 text-xs text-shadow-soft">Chickie Puff</h4>
-                        <p class="text-[10px] text-pink-400 font-semibold">$9.99</p>
-                    </div>
-
-                    <!-- Product 8 -->
-                    <div class="product-item text-center">
-                        <div class="product-bg mb-2 flex items-center justify-center">
-                            <span class="text-3xl">🐼</span>
-                        </div>
-                        <h4 class="font-bold text-pink-500 text-xs text-shadow-soft">Panda Mochi</h4>
-                        <p class="text-[10px] text-pink-400 font-semibold">$14.99</p>
-                    </div>
-                </div>
-
-                <!-- Load More -->
-                <div class="text-center mt-4">
-                    <button class="glass-btn px-5 py-2 rounded-full font-bold text-xs text-pink-500 shadow-lg">
-                        Load More ✨
-                    </button>
-                </div>
-            </section>
-
-            <!-- Newsletter -->
-            <section class="py-4">
-                <div class="text-center">
-                    <div class="text-xl mb-1">💌</div>
-                    <h3 class="text-sm font-bold text-pink-500 mb-1 text-shadow font-['Fredoka']">Join the 7Panda Family</h3>
-                    <p class="text-[10px] text-pink-400 mb-2 text-shadow-soft">Get exclusive drops & discounts!</p>
-                    <div class="flex gap-2">
-                        <input type="email" placeholder="Your email..." class="flex-1 px-3 py-2 rounded-full glass-btn text-pink-500 placeholder-pink-300 text-xs focus:outline-none">
-                        <button class="glass-btn active px-4 py-2 rounded-full font-bold text-xs text-white shadow-lg flex-shrink-0">
-                            Join
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer -->
-            <footer class="py-4 text-center">
-                <div class="flex justify-center gap-2 mb-2">
-                    <a href="#" class="w-8 h-8 rounded-full glass-btn flex items-center justify-center text-sm hover:scale-110 transition-transform">
-                        📸
-                    </a>
-                    <a href="#" class="w-8 h-8 rounded-full glass-btn flex items-center justify-center text-sm hover:scale-110 transition-transform">
-                        💬
-                    </a>
-                    <a href="#" class="w-8 h-8 rounded-full glass-btn flex items-center justify-center text-sm hover:scale-110 transition-transform">
-                        🎵
-                    </a>
-                </div>
-                <p class="text-[10px] text-pink-400/80 text-shadow-soft">© 2026 7Panda. Made with 💖</p>
-            </footer>
+                <h1 class="text-2xl font-bold gradient-text font-['Fredoka']">7Panda</h1>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#" class="text-white/90 hover:text-white font-semibold transition-colors">Home</a>
+                <a href="#" class="text-white/90 hover:text-white font-semibold transition-colors">Shop</a>
+                <a href="#" class="text-white/90 hover:text-white font-semibold transition-colors">Collections</a>
+                <a href="#" class="text-white/90 hover:text-white font-semibold transition-colors">About</a>
+            </nav>
+            
+            <!-- Cart Button -->
+            <button class="cart-btn rounded-full p-3 text-white relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span class="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-yellow-400 text-pink-600 text-xs flex items-center justify-center font-bold shadow-lg">3</span>
+            </button>
         </div>
-    </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero-section w-full px-6 py-12 md:py-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="floating mb-6">
+                <span class="inline-block px-4 py-2 rounded-full glass-btn text-pink-500 text-sm font-bold tracking-wide">
+                    ✨ New Collection Available
+                </span>
+            </div>
+            <h2 class="text-4xl md:text-6xl font-bold text-pink-500 mt-4 mb-4 text-shadow font-['Fredoka']">
+                Squish Your Stress Away
+            </h2>
+            <p class="text-lg md:text-xl text-pink-400/90 max-w-2xl mx-auto text-shadow-soft leading-relaxed mb-8">
+                Ultra-soft, kawaii squishies for stress relief & collecting! Discover our adorable collection of premium squishy toys.
+            </p>
+            <div class="flex gap-4 justify-center">
+                <button class="glass-btn active px-8 py-3 rounded-full font-bold text-base text-white shadow-lg">
+                    Shop Now 🛍️
+                </button>
+                <button class="glass-btn px-8 py-3 rounded-full font-bold text-base text-pink-500 shadow-lg">
+                    View Collections ✨
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="w-full px-6 py-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex gap-3 overflow-x-auto pb-4 scrollbar-hide justify-center">
+                <button class="glass-btn active px-5 py-2 rounded-full text-sm font-bold shadow-lg flex-shrink-0">
+                    All 🌈
+                </button>
+                <button class="glass-btn px-5 py-2 rounded-full text-sm font-bold text-gray-600 shadow-lg flex-shrink-0">
+                    Bears 🐻
+                </button>
+                <button class="glass-btn px-5 py-2 rounded-full text-sm font-bold text-gray-600 shadow-lg flex-shrink-0">
+                    Food 🍰
+                </button>
+                <button class="glass-btn px-5 py-2 rounded-full text-sm font-bold text-gray-600 shadow-lg flex-shrink-0">
+                    Panda 🐼
+                </button>
+                <button class="glass-btn px-5 py-2 rounded-full text-sm font-bold text-gray-600 shadow-lg flex-shrink-0">
+                    Jumbo 🎈
+                </button>
+                <button class="glass-btn px-5 py-2 rounded-full text-sm font-bold text-gray-600 shadow-lg flex-shrink-0">
+                    Limited ⭐
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="w-full px-6 py-12">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold text-pink-500 text-center mb-8 text-shadow font-['Fredoka']">
+                ✨ Trending Squishies
+            </h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Product 1 -->
+                <div class="product-item text-center">
+                    <div class="product-bg mb-3 flex items-center justify-center">
+                        <span class="text-5xl">🐻</span>
+                    </div>
+                    <h4 class="font-bold text-pink-500 text-base text-shadow-soft">Berry Bear</h4>
+                    <p class="text-sm text-pink-400 font-semibold">$12.99</p>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item text-center">
+                    <div class="product-bg mb-3 flex items-center justify-center">
+                        <span class="text-5xl">🍓</span>
+                    </div>
+                    <h4 class="font-bold text-pink-500 text-base text-shadow-soft">Strawberry Cake</h4>
+                    <p class="text-sm text-pink-400 font-semibold">$18.99</p>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item text-center">
+                    <div class="product-bg mb-3 flex items-center justify-center">
+                        <span class="text-5xl">🐱</span>
+                    </div>
+                    <h4 class="font-bold text-pink-500 text-base text-shadow-soft">Cloud Kitty</h4>
+                    <p class="text-sm text-pink-400 font-semibold">$8.99</p>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-item text-center">
+                    <div class="product-bg mb-3 flex items-center justify-center">
+                        <span class="text-5xl">🦄</span>
+                    </div>
+                    <h4 class="font-bold text-pink-500 text-base text-shadow-soft">Dream Unicorn</h4>
+                    <p class="text-sm text-pink-400 font-semibold">$15.99</p>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-item text-center">
+                    <div class="product-bg mb-3 flex items-center justify-center">
+                        <span class="text-5xl">🍑</span>
+                    </div>
+                    <h4 class="font-bold text-pink-500 text-base text-shadow-soft">Peachy Bun</h4>
+                    <p class="text-sm text-pink-400 font-semibold">$10.99</p>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-item text-center">
+                    <div class="product-bg mb-3 flex items-center justify-center">
+                        <span class="text-5xl">🐰</span>
+                    </div>
+                    <h4 class="font-bold text-pink-500 text-base text-shadow-soft">Bunny Mochi</h4>
+                    <p class="text-sm text-pink-400 font-semibold">$7.99</p>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-item text-center">
+                    <div class="product-bg mb-3 flex items-center justify-center">
+                        <span class="text-5xl">🐥</span>
+                    </div>
+                    <h4 class="font-bold text-pink-500 text-base text-shadow-soft">Chickie Puff</h4>
+                    <p class="text-sm text-pink-400 font-semibold">$9.99</p>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-item text-center">
+                    <div class="product-bg mb-3 flex items-center justify-center">
+                        <span class="text-5xl">🐼</span>
+                    </div>
+                    <h4 class="font-bold text-pink-500 text-base text-shadow-soft">Panda Mochi</h4>
+                    <p class="text-sm text-pink-400 font-semibold">$14.99</p>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="text-center mt-10">
+                <button class="glass-btn px-8 py-3 rounded-full font-bold text-base text-pink-500 shadow-lg">
+                    Load More ✨
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="w-full px-6 py-16">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-4xl mb-4">💌</div>
+            <h3 class="text-2xl md:text-3xl font-bold text-pink-500 mb-3 text-shadow font-['Fredoka']">Join the 7Panda Family</h3>
+            <p class="text-base text-pink-400 mb-6 text-shadow-soft">Get exclusive drops, discounts, and early access to new collections!</p>
+            <div class="flex gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="Your email..." class="flex-1 px-5 py-3 rounded-full glass-btn text-pink-500 placeholder-pink-300 text-base focus:outline-none">
+                <button class="glass-btn active px-6 py-3 rounded-full font-bold text-base text-white shadow-lg flex-shrink-0">
+                    Join
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full px-6 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-300 via-rose-300 to-orange-200 flex items-center justify-center shadow-lg">
+                            <span class="text-xl">🧸</span>
+                        </div>
+                        <h4 class="text-xl font-bold gradient-text font-['Fredoka']">7Panda</h4>
+                    </div>
+                    <p class="text-white/70 text-sm">Ultra-soft squishies for stress relief and collecting. Made with love! 💖</p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Shop</h5>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">All Products</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">New Arrivals</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Best Sellers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Sale</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Help</h5>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Shipping</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Returns</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Follow Us</h5>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 rounded-full glass-btn flex items-center justify-center text-lg hover:scale-110 transition-transform">
+                            📸
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass-btn flex items-center justify-center text-lg hover:scale-110 transition-transform">
+                            💬
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass-btn flex items-center justify-center text-lg hover:scale-110 transition-transform">
+                            🎵
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-white/10">
+                <p class="text-white/60 text-sm">© 2026 7Panda. Made with 💖</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
